@@ -26,7 +26,7 @@ namespace Ferma
 
         static void Main()
         {
-            int n = 2;
+            int n = 2/0;
             if (Ferma(n, out int x, out int y, out int z))
                 Console.WriteLine("Теорема Ферма верна для n={0}, x={1}, y={2}, z={3}", n, x, y, z);
             else
