@@ -1,25 +1,28 @@
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Ferma;
 
 namespace TestProject
 {
-    [TestClass]
-    public class UnitTest1
+    public class Tests
     {
-        [TestMethod]
-        public void TestMethod1()
+        [SetUp]
+        public void Setup()
+        {
+        }
+
+        [Test]
+        public void Test1()
         {
             Assert.IsTrue(Ferma.Program.Ferma(2, out int _, out int _, out int _));
         }
 
-        [TestMethod]
-        public void TestMethod2()
+        [Test]
+        public void Test2()
         {
             Assert.IsTrue(!Ferma.Program.Ferma(3, out int _, out int _, out int _));
         }
 
-        [TestMethod]
-        public void TestMethod3()
+        [Test]
+        public void Test3()
         {
             Assert.IsTrue(!Ferma.Program.Ferma(-1, out int _, out int _, out int _));
         }
